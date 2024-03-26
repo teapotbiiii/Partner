@@ -45,13 +45,14 @@ var _x_collision = move_and_collide(move_x, 0, obj_collision, abs(move_x))
 var _y_collision = move_and_collide(0, move_y, obj_collision, abs(move_y) + 1)
 
 
-/*Animation Controller -- SET SPRITE CASES & INDEXES TO THE CORRESPONDING ASSETS IN YOUR PROJECT
+//Animation Controller
 
 if move_x != 0
 {
 	image_xscale = sign(move_x); //make the sprite face the x movement direction
 }
 
+/*
 switch (sprite_index) //handles cases for switching between animations
 {
 	#region idle

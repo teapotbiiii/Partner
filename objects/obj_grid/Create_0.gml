@@ -2,7 +2,7 @@ var _columns = 15; //set this to how many columns of corn
 var _rows = 15; // set this to how many rows of corn
 var _width = 256; //set this to your sprite width
 var _height = 256; //set this to your sprite height
-var _offset = 800; //set this to how far from (0,0) you want your grid to start
+var _offset = 600; //set this to how far from (0,0) you want your grid to start
 
 for(i = 0; i < _columns; i++)
 {

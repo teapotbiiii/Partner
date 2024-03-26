@@ -22,7 +22,7 @@ else if (keyboard_check(ord("S")) && !keyboard_check(ord("W")))
 if (instance_exists(target))
 {
 	x_to = target.x + _cam_facing * x_offset;
-	y_to = target.y + y_offset;
+	y_to = target.y + _cam_facing * y_offset;
 }
 
 x += (x_to - x) / cam_trackspeed;

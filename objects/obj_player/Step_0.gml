@@ -1,4 +1,4 @@
-///Player movement
+ ///Player movement
 //Get movement input
 var _x_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _y_input = keyboard_check(ord("S")) - keyboard_check(ord("W"));
@@ -38,20 +38,14 @@ move_x = clamp(move_x, -move_speed, move_speed);
 move_y = clamp(move_y, -move_speed, move_speed);
 
 //determine collision
-grounded = place_meeting(x, y+1, obj_wall);
+grounded = place_meeting(x, y+1, obj_collision);
 
-var _x_collision = move_and_collide(move_x, 0, obj_wall, abs(move_x))
+var _x_collision = move_and_collide(move_x, 0, obj_collision, abs(move_x))
 
-var _y_collision = move_and_collide(0, move_y, obj_wall, abs(move_y) + 1, move_x, move_y, move_x, move_y)
+var _y_collision = move_and_collide(0, move_y, obj_collision, abs(move_y) + 1)
 
-if (array_length(_y_collision) > 0)
-{
-	jump_count = 0;
-	if (move_y > 0) can_jump = 12;
-	move_y = 0;
-}
 
-///Animation Controller -- SET SPRITE CASES & INDEXES TO THE CORRESPONDING ASSETS IN YOUR PROJECT
+/*Animation Controller -- SET SPRITE CASES & INDEXES TO THE CORRESPONDING ASSETS IN YOUR PROJECT
 
 if move_x != 0
 {

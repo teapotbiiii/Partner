@@ -49,7 +49,7 @@ var _y_collision = move_and_collide(0, move_y, obj_collision, abs(move_y) + 1)
 
 if move_x != 0
 {
-	image_xscale = sign(move_x); //make the sprite face the x movement direction
+	image_xscale = sign(0 - move_x); //make the sprite face the x movement direction
 }
 
 /*

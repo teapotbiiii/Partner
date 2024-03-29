@@ -1,1 +1,1 @@
-create_instance(spr_controls, 0, x, y);
+room_goto(rm_controls);

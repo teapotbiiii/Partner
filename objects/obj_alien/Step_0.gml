@@ -17,3 +17,14 @@ if point_distance(x,y,obj_player.x,obj_player.y)<=1500
 {
         move_towards_point(obj_player.x,obj_player.y,12);
 } 
+
+//face x direction
+if hspeed >= 0
+{
+	image_xscale = sign(0 - zoom_x); //make the sprite face the x movement direction
+}
+
+if hspeed < 0
+{
+	image_xscale = sign(zoom_x); //make the sprite face the x movement direction
+}

@@ -10,6 +10,6 @@ for(i = 0; i < _columns; i++)
 	{
         grid_x = _width * i;
         grid_y = _height * ii;
-        instance_create_depth(grid_x + _offset,grid_y + _offset,0,obj_corn);
+        instance_create_depth(grid_x + _offset,grid_y + _offset,150,obj_corn);
     }
 }

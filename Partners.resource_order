@@ -17,7 +17,6 @@
   ],
   "ResourceOrderSettings": [
     {"name":"spr_collision","order":3,"path":"sprites/spr_collision/spr_collision.yy",},
-    {"name":"fnt_man","order":11,"path":"fonts/fnt_man/fnt_man.yy",},
     {"name":"obj_buddy","order":10,"path":"objects/obj_buddy/obj_buddy.yy",},
     {"name":"spr_corn","order":2,"path":"sprites/spr_corn/spr_corn.yy",},
     {"name":"spr_barn","order":16,"path":"sprites/spr_barn/spr_barn.yy",},
@@ -34,6 +33,7 @@
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"spr_btn_controls","order":7,"path":"sprites/spr_btn_controls/spr_btn_controls.yy",},
     {"name":"spr_pc_attack","order":12,"path":"sprites/spr_pc_attack/spr_pc_attack.yy",},
+    {"name":"spr_bg","order":19,"path":"sprites/spr_bg/spr_bg.yy",},
     {"name":"obj_collision","order":4,"path":"objects/obj_collision/obj_collision.yy",},
     {"name":"spr_btn_credits","order":9,"path":"sprites/spr_btn_credits/spr_btn_credits.yy",},
     {"name":"spr_pc_recoil","order":11,"path":"sprites/spr_pc_recoil/spr_pc_recoil.yy",},
@@ -43,6 +43,7 @@
     {"name":"spr_title","order":5,"path":"sprites/spr_title/spr_title.yy",},
     {"name":"obj_btn_controls","order":8,"path":"objects/obj_btn_controls/obj_btn_controls.yy",},
     {"name":"spr_al_attack","order":14,"path":"sprites/spr_al_attack/spr_al_attack.yy",},
+    {"name":"spr_controlscreen","order":20,"path":"sprites/spr_controlscreen/spr_controlscreen.yy",},
     {"name":"spr_pc_run","order":10,"path":"sprites/spr_pc_run/spr_pc_run.yy",},
     {"name":"spr_al_recoil","order":15,"path":"sprites/spr_al_recoil/spr_al_recoil.yy",},
     {"name":"obj_jammer","order":6,"path":"objects/obj_jammer/obj_jammer.yy",},

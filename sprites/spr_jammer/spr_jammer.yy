@@ -3,9 +3,9 @@
   "resourceVersion": "1.0",
   "name": "spr_jammer",
   "bbox_bottom": 511,
-  "bbox_left": 159,
+  "bbox_left": 157,
   "bbox_right": 433,
-  "bbox_top": 53,
+  "bbox_top": 52,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c33715e-d40a-4451-bfa1-f7db37dbdb85",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"68e688b8-3e37-416b-9c09-c9eac5086542",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 512,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e444e247-812a-41a1-8551-a994a3b9880c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"06d65bad-a5c6-4371-8066-af7fc2296d2e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9c33715e-d40a-4451-bfa1-f7db37dbdb85","path":"sprites/spr_jammer/spr_jammer.yy",},},},"Disabled":false,"id":"3e658dc8-80bc-4fe1-8489-6c585caa8b9d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"68e688b8-3e37-416b-9c09-c9eac5086542","path":"sprites/spr_jammer/spr_jammer.yy",},},},"Disabled":false,"id":"bc60eea7-edc2-4546-8e78-9c58277d3229","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

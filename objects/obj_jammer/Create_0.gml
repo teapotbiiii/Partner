@@ -1,7 +1,7 @@
 draw_set_font(fnt_man);
 draw_set_halign(bbox_left);
 draw_set_valign(bbox_top);
-draw_set_color(c_grey);
+draw_set_color(c_white);
 
 show_text = false;
 

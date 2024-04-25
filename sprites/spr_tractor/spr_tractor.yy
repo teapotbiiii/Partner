@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_tractor",
-  "bbox_bottom": 245,
-  "bbox_left": 1,
-  "bbox_right": 255,
-  "bbox_top": 0,
+  "bbox_bottom": 506,
+  "bbox_left": 6,
+  "bbox_right": 508,
+  "bbox_top": 82,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"366c0a35-f472-4f7d-bc3f-a0efc7fe0f0a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc7c460b-bb22-412c-acc5-0d8a2e104ac4",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 256,
+  "height": 512,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2e50b305-c195-4410-98a6-6c5d0da70672","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d6dd6b0a-381f-4030-a567-f132a03535a1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"366c0a35-f472-4f7d-bc3f-a0efc7fe0f0a","path":"sprites/spr_tractor/spr_tractor.yy",},},},"Disabled":false,"id":"021526f7-84e3-4d81-a516-e53396aff80a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fc7c460b-bb22-412c-acc5-0d8a2e104ac4","path":"sprites/spr_tractor/spr_tractor.yy",},},},"Disabled":false,"id":"bb27f2a9-69eb-4d5c-9493-3b4bcaf128a7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 256,
+  "width": 512,
 }

@@ -8,4 +8,5 @@ if show_text == true
 if jammer_switch == true
 {
 	draw_text(x - 50, y - 250, "ACTIVATED");
+	show_text = false;
 }

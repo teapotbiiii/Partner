@@ -7,4 +7,10 @@ move_x = 0;
 move_y = 0;
 
 attack = false;
+global.stun = false;
+cooldown = 0;
+cooldown_speed = 1/room_speed;
+global.recoil = false;
+global.health = 3;
+
 grounded = false;

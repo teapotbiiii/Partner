@@ -21,6 +21,7 @@
     {"name":"spr_ded","order":25,"path":"sprites/spr_ded/spr_ded.yy",},
     {"name":"spr_corn","order":2,"path":"sprites/spr_corn/spr_corn.yy",},
     {"name":"spr_barn","order":15,"path":"sprites/spr_barn/spr_barn.yy",},
+    {"name":"spr_pixel","order":33,"path":"sprites/spr_pixel/spr_pixel.yy",},
     {"name":"spr_jammer","order":4,"path":"sprites/spr_jammer/spr_jammer.yy",},
     {"name":"spr_ouch","order":12,"path":"sprites/spr_ouch/spr_ouch.yy",},
     {"name":"obj_camera","order":5,"path":"objects/obj_camera/obj_camera.yy",},

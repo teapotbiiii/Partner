@@ -2,10 +2,18 @@
 if place_meeting(x,y,obj_corn)
 {
 	depth = -y;
+	if !audio_is_playing(snd_corn)
+	{
+		audio_play_sound(snd_corn, 0, false, 8);
+	}
 }
 else
 {
 	depth = 0;
+	if audio_is_playing(snd_corn)
+	{
+		audio_stop_sound(snd_corn);
+	}
 }
 
 //Get movement input
@@ -59,34 +67,46 @@ if move_x != 0
 	image_xscale = -sign(move_x); //make the sprite face the x movement direction
 }
 
-if cooldown <= 5 && cooldown > 0
-{
-	cooldown -= cooldown_speed;
-}
-
 switch (sprite_index) //handles cases for switching between animations
 {
 	#region idle
 	case spr_pc_idle: //what happens when playing the idle animation
 		image_speed = 1;
-		if move_x != 0
+		if move_x != 0 || move_y != 0
 		{
 			sprite_index = spr_pc_run; //swap to run animation when moving and on ground
 			image_index = 0; //reset frame count
-		}
-	
-		if move_y != 0
-		{
-			sprite_index = spr_pc_run; 
-			image_index = 0; //reset frame count
+			if audio_is_paused(snd_pc_walk)
+			{
+				audio_resume_sound(snd_pc_walk);
+			}
+			if !audio_is_paused(snd_pc_walk) && !audio_is_playing(snd_pc_walk)
+			{
+				audio_play_sound(snd_pc_walk, 0, true, 1, 1);
+			}
 		}
 		
-		if _attack_input == true && cooldown == 0
+		if _attack_input == true
+		{
+			sprite_index = spr_pc_attack;
+			image_index = 0; //reset frame
+			attack = true;
+			if !audio_is_playing(snd_pc_attack)
+			{
+				audio_play_sound(snd_pc_attack, 0, false);
+			}
+		}
+		
+		if _attack_input == true && distance_to_point(obj_alien.x, obj_alien.y) < 6
 		{
 			sprite_index = spr_pc_attack;
 			image_index = 0; //reset frame
 			attack = true;
 			global.stun = true;
+			if !audio_is_playing(snd_pc_attack)
+			{
+				audio_play_sound(snd_pc_attack, 0, false);
+			}
 		}
 		
 		if global.attack == true
@@ -96,6 +116,10 @@ switch (sprite_index) //handles cases for switching between animations
 			move_x = 0;
 			move_y = 0;
 			global.health--;
+			if !audio_is_playing(snd_pc_recoil)
+			{
+				audio_play_sound(snd_pc_recoil, 0, false);
+			}
 		}
 		
 		if global.health == 0
@@ -110,26 +134,34 @@ switch (sprite_index) //handles cases for switching between animations
 	#region run
 	case spr_pc_run: //what happens when playing the run animation
 		image_speed = 1;
-		if _attack_input == true && cooldown == 0
+		if _attack_input == true && distance_to_point(obj_alien.x, obj_alien.y) < 6
 		{
 			sprite_index = spr_pc_attack;
 			image_index = 0; //reset frame
 			attack = true;
 			global.stun = true;
+			if !audio_is_playing(snd_pc_attack)
+			{
+				audio_play_sound(snd_pc_attack, 0, false);
+			}
+		}
+		
+		if _attack_input == true 
+		{
+			sprite_index = spr_pc_attack;
+			image_index = 0; //reset frame
+			attack = true;
+			if !audio_is_playing(snd_pc_attack)
+			{
+				audio_play_sound(snd_pc_attack, 0, false);
+			}
 		}
 		
 		if move_x == 0 && move_y == 0
 		{
 			sprite_index = spr_pc_idle;
 			image_index = 0 //reset frame
-		}
-		
-		if move_x == 0 && move_y == 0 && _attack_input == true && cooldown == 0
-		{
-			sprite_index = spr_pc_attack;
-			image_index = 0; //reset frame
-			attack = true;
-			global.stun = true;
+			audio_pause_sound(snd_pc_walk);
 		}
 		break;
 	#endregion
@@ -141,20 +173,20 @@ switch (sprite_index) //handles cases for switching between animations
 			sprite_index = spr_pc_idle; //swap to idle if animation finishes
 			image_index = 0; //reset frame
 			attack = false;
-			cooldown = 5;
-			global.stun = false;
 		}
 		
-		if move_x != 0
+		if move_x != 0 || move_y != 0
 		{
 			sprite_index = spr_pc_run; //swap to run animation when moving
 			image_index = 0; //reset frame count
-		}
-	
-		if move_y != 0
-		{
-			sprite_index = spr_pc_run; 
-			image_index = 0; //reset frame count
+			if audio_is_paused(snd_pc_walk)
+			{
+				audio_resume_sound(snd_pc_walk);
+			}
+			if !audio_is_paused(snd_pc_walk) && !audio_is_playing(snd_pc_walk)
+			{
+				audio_play_sound(snd_pc_walk, 0, true, 1, 1);
+			}
 		}
 	#endregion
 	#region recoil
@@ -166,16 +198,18 @@ switch (sprite_index) //handles cases for switching between animations
 			image_index = 0; //reset frame
 		}
 		
-		if move_x != 0
+		if move_x != 0 || move_y != 0
 		{
 			sprite_index = spr_pc_run; //swap to run animation when moving
 			image_index = 0; //reset frame count
-		}
-	
-		if move_y != 0
-		{
-			sprite_index = spr_pc_run; 
-			image_index = 0; //reset frame count
+			if audio_is_paused(snd_pc_walk)
+			{
+				audio_resume_sound(snd_pc_walk);
+			}
+			if !audio_is_paused(snd_pc_walk) && !audio_is_playing(snd_pc_walk)
+			{
+				audio_play_sound(snd_pc_walk, 0, true, 1, 1);
+			}
 		}
 		break;
 	#endregion
@@ -184,7 +218,7 @@ switch (sprite_index) //handles cases for switching between animations
 		image_speed = 1;
 		if image_index == 18
 		{
-			room_goto(rm_over);
+			room_goto(rm_lose);
 		}
 		
 		break;

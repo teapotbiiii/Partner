@@ -9,3 +9,5 @@ attack = false;
 global.attack = false;
 cooldown = 0;
 cooldown_speed = 1/room_speed;
+
+stun_timer = 0;
